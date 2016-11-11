@@ -12,8 +12,6 @@ import java.util.stream.*;
 public class Solution {
 
     static String SExpression(String nodes) {
-        Objects.requireNonNull(nodes, "nodes should not be null");
-
         final Validation<ErrorType, String> result = parse(nodes);
         if (result.isValid()) {
             return result.get();

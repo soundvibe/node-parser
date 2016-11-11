@@ -3,7 +3,11 @@ package solution;
 /**
  * @author OZY on 2016.11.11.
  */
-public class TreePrinter {
+public final class TreePrinter {
+
+    private TreePrinter() {
+        //no instance
+    }
 
     public static String print(Tree tree) {
         final StringBuilder sb = new StringBuilder();
@@ -11,7 +15,7 @@ public class TreePrinter {
         return sb.toString();
     }
 
-    static void printNode(Node node, StringBuilder sb) {
+    private static void printNode(Node node, StringBuilder sb) {
         sb.append("(").append(node.value);
 
         if (node.hasLeft()) {
